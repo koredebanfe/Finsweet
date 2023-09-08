@@ -1,0 +1,125 @@
+@use "reset";
+
+
+
+@mixin style() {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.link {
+    display: inline-block;
+    color: white;
+    background-color: #FF6433;
+    padding: 16px 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+    outline: none;
+}
+
+.finsweet--header--nav{
+    @include style;
+    margin-top: 20px;
+    margin-bottom: 10vh;
+
+    ul{
+        @include style;
+        list-style-type: none;
+        min-width: 50vw;
+    }
+
+    .nav--sub {
+        @include style;
+        font-size: 0.8em;
+
+        [alt="whatsapp logo"] {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            
+        }
+    }
+}
+
+
+.finsweet--header--content{
+    @include style;
+    margin: auto;
+
+    article {
+        max-width: 30vw;
+        line-height: 2;
+        margin-top: 75px;
+
+        & div:last-child {
+            @include style;
+            padding: 0;
+            width: 80%;
+            margin-top: 3rem;
+        }
+
+        .open--time {
+            color: grey;
+        }
+    }
+
+    & > div img{
+        margin-right: -70px;
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.finsweet--quote {
+    @include style;
+    background-color: #E2E6E9;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    h1, h2{
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    &--feature {
+        width: 30%;
+
+        & a > img {
+            background-color: #E2E6E9;
+        }
+    }
+
+    img {
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+        width: 40px;
+        height: auto;
+        margin-right: 15px;
+       }
+ 
+    & article > div {
+        @include style;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    &--link {
+       div label > input {
+        display: inline-block;
+            width: 100%;
+            padding: 15px 5px;
+            outline: none;
+        }
+    }
+}
+

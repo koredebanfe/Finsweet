@@ -1,0 +1,23 @@
+@font-face {
+    font-family: myFont;
+    src: url(../font/Manrope-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont;
+}
+
+// img {
+//     max-width: 100px;
+//     height: auto;
+// }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
