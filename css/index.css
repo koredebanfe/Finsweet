@@ -1,7 +1,12 @@
+@font-face {
+  font-family: myFont;
+  src: url(../font/Manrope-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: myFont;
 }
 
 a {
@@ -28,6 +33,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   margin-top: 20px;
   margin-bottom: 10vh;
 }
@@ -35,6 +41,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   list-style-type: none;
   min-width: 50vw;
 }
@@ -42,6 +49,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   font-size: 0.8em;
 }
 .finsweet--header--nav .nav--sub [alt="whatsapp logo"] {
@@ -54,6 +62,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   margin: auto;
 }
 .finsweet--header--content article {
@@ -65,6 +74,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   padding: 0;
   width: 80%;
   margin-top: 3rem;
@@ -82,6 +92,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   background-color: #E2E6E9;
   padding-top: 3em;
   padding-bottom: 3em;
@@ -93,7 +104,7 @@ h1 {
   margin-bottom: 1rem;
 }
 .finsweet--quote--feature {
-  width: 30%;
+  width: 40%;
 }
 .finsweet--quote--feature a > img {
   background-color: #E2E6E9;
@@ -110,6 +121,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10vw;
+  line-height: 2;
   padding: 0;
   margin-bottom: 30px;
 }
@@ -118,4 +130,160 @@ h1 {
   width: 100%;
   padding: 15px 5px;
   outline: none;
+}
+
+.finsweet--process {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw;
+  line-height: 2;
+  display: flex;
+  margin: 3em 0;
+}
+.finsweet--process article {
+  width: 40%;
+}
+.finsweet--process ul {
+  list-style-type: none;
+}
+.finsweet--process ul li p {
+  padding-left: 3.5em;
+  border-left: 3px dashed yellow;
+  margin-left: 0.8em;
+  padding-bottom: 1em;
+}
+.finsweet--process ul .number {
+  background-color: #661CE7;
+  border-radius: 50%;
+  width: 80px;
+  height: 60px;
+  padding: 5px;
+  margin-right: 2em;
+}
+
+.finsweet--offer {
+  padding: 5em 10vw;
+  line-height: 2;
+  text-align: center;
+  background-color: #E2E6E9;
+}
+.finsweet--offer--list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.finsweet--offer--list div {
+  width: 250px;
+  padding: 40px 0;
+  margin: auto;
+  margin-bottom: 3px;
+  background-color: #FFFFFF;
+}
+.finsweet--offer h2 {
+  margin: 3rem 0;
+}
+.finsweet--offer .finsweet--wheel {
+  background-color: #FF6433;
+  color: #FFFFFF;
+}
+.finsweet--offer a {
+  display: inline-block;
+  text-align: right;
+  margin: 2rem 0;
+}
+.finsweet--offer p {
+  text-align: center;
+}
+
+.finsweet--CTA {
+  background: url(/image/Carbg.svg) no-repeat left, url(/image/pliersbg.svg) no-repeat right;
+  background-size: contain, 50vw;
+}
+.finsweet--CTA article {
+  text-align: left;
+  width: 50vw;
+  margin: auto;
+  padding: 3rem 1rem;
+  color: white;
+  background-color: #FF6433;
+}
+.finsweet--CTA article a {
+  background-color: black;
+  color: #E2E6E9;
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .finsweet--CTA {
+    background-size: 50vw, 50vw;
+  }
+  .finsweet--CTA article {
+    width: 30vw;
+  }
+}
+
+.finsweet--experience {
+  padding: 3rem 10vw;
+  display: grid;
+  justify-content: space-between;
+  background-color: #E2E6E9;
+  text-align: justify;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.finsweet--experience div {
+  margin-bottom: 2rem;
+}
+.finsweet--experience div p {
+  margin-bottom: 1rem;
+}
+.finsweet--experience div p:first-child {
+  color: #9d7dd4;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.finsweet--brands {
+  margin: 3rem auto;
+  padding: 0 10vw;
+}
+.finsweet--brands h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto;
+  font-weight: 700;
+}
+
+.finsweet--testimonials {
+  background-color: #E2E6E9;
+  padding: 3rem 10vw;
+}
+.finsweet--testimonials h1 {
+  width: 40vw;
+  margin: auto;
+}
+.finsweet--testimonials article {
+  background-color: #FFFFFF;
+  width: 80%;
+  margin: 3rem;
+  border-radius: 5px;
+  padding: 2em 1em;
+}
+.finsweet--testimonials--profile {
+  display: flex;
+}
+.finsweet--testimonials--profile div:last-child {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    margin: 3rem none;
+    width: 40%;
+  }
+  .testimonial--section {
+    display: flex;
+  }
 }/*# sourceMappingURL=index.css.map */
