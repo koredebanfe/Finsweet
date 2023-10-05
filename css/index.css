@@ -36,21 +36,16 @@ h1 {
   line-height: 2;
   margin-top: 20px;
   margin-bottom: 10vh;
+  border-bottom: 1px solid rgb(219, 216, 216);
 }
 .finsweet--header--nav ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10vw;
-  line-height: 2;
   list-style-type: none;
   min-width: 50vw;
 }
 .finsweet--header--nav .nav--sub {
+  font-size: 0.8em;
   display: flex;
   justify-content: space-between;
-  padding: 0 10vw;
-  line-height: 2;
-  font-size: 0.8em;
 }
 .finsweet--header--nav .nav--sub [alt="whatsapp logo"] {
   display: inline-block;
@@ -58,23 +53,36 @@ h1 {
   height: 40px;
 }
 
+@media screen and (min-width: 769px) {
+  .finsweet--header--nav {
+    border: none;
+  }
+  .finsweet--header--nav div:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  .finsweet--header--nav div:first-child ul {
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+  }
+  .finsweet--header--nav div:first-child ul li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
 .finsweet--header--content {
-  display: flex;
-  justify-content: space-between;
   padding: 0 10vw;
   line-height: 2;
   margin: auto;
 }
 .finsweet--header--content article {
-  max-width: 30vw;
-  line-height: 2;
+  max-width: 80vw;
   margin-top: 75px;
 }
 .finsweet--header--content article div:last-child {
   display: flex;
   justify-content: space-between;
-  padding: 0 10vw;
-  line-height: 2;
   padding: 0;
   width: 80%;
   margin-top: 3rem;
@@ -83,14 +91,21 @@ h1 {
   color: grey;
 }
 .finsweet--header--content > div img {
-  margin-right: -70px;
   width: 400px;
   height: 500px;
+  margin: auto 0;
 }
 
+@media screen and (min-width: 769px) {
+  .finsweet--header--content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .finsweet--header--content article {
+    max-width: 30vw;
+  }
+}
 .finsweet--quote {
-  display: flex;
-  justify-content: space-between;
   padding: 0 10vw;
   line-height: 2;
   background-color: #E2E6E9;
@@ -104,7 +119,7 @@ h1 {
   margin-bottom: 1rem;
 }
 .finsweet--quote--feature {
-  width: 40%;
+  width: 80%;
 }
 .finsweet--quote--feature a > img {
   background-color: #E2E6E9;
@@ -120,28 +135,37 @@ h1 {
 .finsweet--quote article > div {
   display: flex;
   justify-content: space-between;
-  padding: 0 10vw;
-  line-height: 2;
   padding: 0;
   margin-bottom: 30px;
 }
 .finsweet--quote--link div label > input {
   display: inline-block;
-  width: 100%;
+  width: 80%;
   padding: 15px 5px;
   outline: none;
 }
 
+@media screen and (min-width: 768px) {
+  .finsweet--quote {
+    display: flex;
+    justify-content: space-between;
+  }
+  .finsweet--quote--feature {
+    width: 40%;
+  }
+  .finsweet--quote--link div label > input {
+    display: inline-block;
+    width: 100%;
+  }
+}
 .finsweet--process {
-  display: flex;
-  justify-content: space-between;
   padding: 0 10vw;
   line-height: 2;
-  display: flex;
   margin: 3em 0;
 }
 .finsweet--process article {
-  width: 40%;
+  width: 80%;
+  margin-bottom: 4rem;
 }
 .finsweet--process ul {
   list-style-type: none;
@@ -161,6 +185,15 @@ h1 {
   margin-right: 2em;
 }
 
+@media screen and (min-width: 768px) {
+  .finsweet--process {
+    display: flex;
+    justify-content: space-between;
+  }
+  .finsweet--process article {
+    width: 40%;
+  }
+}
 .finsweet--offer {
   padding: 5em 10vw;
   line-height: 2;
@@ -195,34 +228,42 @@ h1 {
 }
 
 .finsweet--CTA {
-  background: url("/image/Carbg.svg") no-repeat left, url("/image/pliersbg.svg") no-repeat right;
-  background-size: contain, 50vw;
+  background-color: #FF6433;
 }
 .finsweet--CTA article {
   text-align: left;
-  width: 50vw;
+  width: 80vw;
   margin: auto;
   padding: 3rem 1rem;
   color: white;
-  background-color: #FF6433;
 }
 .finsweet--CTA article a {
   background-color: black;
   color: #E2E6E9;
   display: inline-block;
-  margin: 2rem 0;
+  margin-top: 2rem;
   padding: 1rem 0.5rem;
   border-radius: 5px;
 }
+
+@media screen and (min-width: 481px) {
+  .finsweet--CTA {
+    background-size: contain, contain;
+  }
+  .finsweet--CTA article {
+    width: 50vw;
+  }
+}
 @media screen and (min-width: 768px) {
   .finsweet--CTA {
-    background-size: 50vw, 50vw;
+    background: url("/image/Carbg.svg") no-repeat left, url("/image/pliersbg.svg") no-repeat right;
+    background-size: contain, auto;
   }
   .finsweet--CTA article {
     width: 30vw;
+    background-color: #FF6433;
   }
 }
-
 .finsweet--experience {
   padding: 3rem 10vw;
   display: grid;
@@ -286,4 +327,72 @@ h1 {
   .testimonial--section {
     display: flex;
   }
+}
+.finsweet--FAQ {
+  background-color: #E2E6E9;
+  padding-bottom: 2rem;
+}
+.finsweet--FAQ h2 {
+  text-align: center;
+}
+.finsweet--FAQ h3 {
+  display: flex;
+}
+.finsweet--FAQ h3 .button--nav {
+  margin-left: 30%;
+  background-color: #FF6433;
+  padding: 0.3rem 0.4rem;
+  text-align: end;
+}
+.finsweet--FAQ article {
+  background-color: #FFFFFF;
+  width: 80vw;
+  margin: 2rem auto;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .finsweet--FAQ article {
+    width: 40vw;
+  }
+}
+.finsweet--footer {
+  color: white;
+}
+.finsweet--footer h3 {
+  color: grey;
+  font-size: 1rem;
+}
+.finsweet--footer--media {
+  padding: 0 10vw;
+  line-height: 2;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgb(22, 22, 22);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+  gap: 10vw;
+}
+.finsweet--footer--media a img {
+  margin-right: 10px;
+  margin-top: 4rem;
+}
+
+.finsweet--more--info {
+  background-color: black;
+  padding: 0 10vw;
+  line-height: 2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+}
+.finsweet--more--info a {
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+}
+.finsweet--more--info div:last-child {
+  margin-left: 10px;
 }/*# sourceMappingURL=index.css.map */

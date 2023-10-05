@@ -1,12 +1,14 @@
 @use "reset";
 
-
+@mixin rule(){
+    padding: 0 10vw;
+    line-height: 2;
+}
 
 @mixin style() {
     display: flex;
     justify-content: space-between;
-    padding: 0 10vw;
-    line-height: 2;
+   
 }
 
 h1 {
@@ -26,19 +28,19 @@ h1 {
 
 .finsweet--header--nav{
     @include style;
+    @include rule;
     margin-top: 20px;
     margin-bottom: 10vh;
+    border-bottom: 1px solid rgb(219, 216, 216);
 
     ul{
-        @include style;
         list-style-type: none;
         min-width: 50vw;
     }
 
     .nav--sub {
-        @include style;
         font-size: 0.8em;
-
+        @include style;
         [alt="whatsapp logo"] {
             display: inline-block;
             width: 40px;
@@ -48,14 +50,33 @@ h1 {
     }
 }
 
+@media screen and (min-width: 769px) {
+    .finsweet--header--nav{
+        border: none;
+
+        & div:first-child {
+            @include style;
+            ul {
+                @include style;
+                justify-self: center;
+
+                li {
+                    display: inline-block;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+        
+}
+
 
 .finsweet--header--content{
-    @include style;
+    @include rule;
     margin: auto;
 
     article {
-        max-width: 30vw;
-        line-height: 2;
+        max-width: 80vw;
         margin-top: 75px;
 
         & div:last-child {
@@ -71,17 +92,31 @@ h1 {
     }
 
     & > div img{
-        margin-right: -70px;
         width: 400px;
         height: 500px;
+        margin: auto 0;
     }
 }
 
+// header section of nav media query
+@media screen and (min-width: 769px) {
+    .finsweet--header--content{
+        @include style;
+
+        article {
+            max-width: 30vw;
+        }
+
+    }
+}
+
+// finsweet quote section styling
 .finsweet--quote {
-    @include style;
+    @include rule;
     background-color: #E2E6E9;
     padding-top: 3em;
     padding-bottom: 3em;
+
 
     h1, h2{
         margin-bottom: 2rem;
@@ -92,7 +127,7 @@ h1 {
     }
 
     &--feature {
-        width: 40%;
+        width: 80%;
 
         & a > img {
             background-color: #E2E6E9;
@@ -117,21 +152,41 @@ h1 {
     &--link {
        div label > input {
         display: inline-block;
-            width: 100%;
+            width: 80%;
             padding: 15px 5px;
             outline: none;
         }
     }
 }
 
+// finsweet quote section responsiveness
+@media screen and (min-width:768px) {
+    .finsweet--quote {
+        @include style;
+        
+        &--feature {
+            width: 40%;
+        }
+    
+        &--link {
+           div label > input {
+            display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+// finsweet process section stlying
 .finsweet--process {
-    @include style;
-    display: flex;
+    @include rule;
     margin:  3em 0; 
     
     
     article {
-        width: 40%;
+        width: 80%;
+        margin-bottom: 4rem;
     }
 
     ul {
@@ -156,6 +211,18 @@ h1 {
             padding: 5px;
             margin-right: 2em;
         }
+    }
+}
+
+// finsweet process reponsiveness styling
+@media screen and (min-width: 768px) {
+    .finsweet--process {
+        @include style;
+    
+        article {
+            width: 40%;
+        }
+    
     }
 }
 
@@ -198,35 +265,49 @@ h1 {
     }
 }
 
+// finsweet cta section styling
 .finsweet--CTA {
-    background: url('/image/Carbg.svg') no-repeat left, url('/image/pliersbg.svg') no-repeat right;
-    background-size: contain, 50vw;
-
+     background-color: #FF6433;
     article {
-        text-align: left;
-    width: 50vw;
-    margin: auto;
-    padding: 3rem 1rem;
-    color: white;
-    background-color: #FF6433;
+            text-align: left;
+            width: 80vw;
+            margin: auto;
+            padding: 3rem 1rem;
+            color: white;
 
-    a {
-        background-color: black;
-        color: #E2E6E9;
-        display: inline-block;
-        margin: 2rem 0;
-        padding: 1rem 0.5rem;
-        border-radius: 5px;
-    }
+            a {
+                background-color: black;
+               color: #E2E6E9;
+                display: inline-block;
+                margin-top: 2rem;
+                padding: 1rem 0.5rem;
+               border-radius: 5px;
+           }
     }
 
-    @media screen and (min-width: 768px ) {
-        background-size: 50vw, 50vw;
+}
+
+@media screen and (min-width: 481px) {
+    .finsweet--CTA{
+        background-size: contain, contain;
         article {
-            width: 30vw;
+            width: 50vw;
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .finsweet--CTA {
+        background: url('/image/Carbg.svg') no-repeat left, url('/image/pliersbg.svg') no-repeat right;
+        background-size:  contain, auto;
+
+        article {
+            width: 30vw;
+            background-color: #FF6433;
+    }
+    }
+}
+
 
 .finsweet--experience {
     padding: 3rem 10vw;
@@ -300,7 +381,85 @@ h1 {
    .testimonial--section {
     display: flex;
    }
+}
 
-   
+.finsweet--FAQ {
+    background-color: #E2E6E9;
+    padding-bottom: 2rem;
+    h2 {
+        text-align: center;
+    }
+    
+    h3 {
+        display: flex;
+
+        .button--nav {
+            margin-left: 30%;
+            background-color: #FF6433;
+            padding: 0.3rem 0.4rem;
+            text-align: end;
+        }
+    }
+    article {
+        background-color: #FFFFFF;
+        width: 80vw;
+        margin: 2rem auto;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .finsweet--FAQ {
+        article {
+            width: 40vw;
+        }
+    }
+}
+
+.finsweet--footer {
+    color: white;
+
+    h3 {
+        color: grey;
+        font-size: 1rem;
+    }
+
+    &--media {
+        @include rule;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-color: rgb(22, 22, 22);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+        gap: 10vw;
+
+        & a {
+            img {
+                margin-right: 10px;
+                margin-top: 4rem;
+            }
+        }
+    }
+}
+
+
+.finsweet--more--info {
+    background-color: black;
+    @include rule;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+
+    a {
+        color: white;
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    & div:last-child {
+        margin-left: 10px;
+    }
 }
 
